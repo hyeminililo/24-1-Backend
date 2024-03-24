@@ -1,0 +1,7 @@
+package net.skhu.controller;
+
+import net.skhu.dto.Student;
+
+public class ThirdController {
+Student student = new Student();
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymelesf.org">
+<head>
+<meta charset="utf-8">
+<title>hw과제</title>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<table>
+		<thead>
+			<th>학생 정보 출력</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>이름</td>
+				<td><p th:text="${studnetName}">홍길동</p></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><p th:text="${studnetNumber}">기본학번</p></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><p th:text="${studnetName}">홍길동</p></td>
+			</tr>
+			
+		</tbody>
+	</table>
+</body>
+</html>
