@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/common.css" />
 <title>edit page</title>
 <style>
@@ -29,41 +29,41 @@ button {
 <body>
 	<div class="container">
 		<form method="post" th:object="${student}">
-			<h1 th:text="${student.id>0 ?'ÇÐ»ý¼öÁ¤' :'ÇÐ»ý µî·Ï'}"></h1>
+			<h1 th:text="${student.id>0 ?'í•™ìƒìˆ˜ì •' :'í•™ìƒ ë“±ë¡'}"></h1>
 			<table>
 				<tr>
-					<td>ÇÐ¹ø:</td>
+					<td>í•™ë²ˆ:</td>
 					<td><input type="text" th:field="*{studentNo}" /><br></td>
 				</tr>
 				<tr>
-					<td>ÀÌ¸§:</td>
+					<td>ì´ë¦„:</td>
 					<td><input type="text" th:field="*{name}"><br></td>
 				</tr>
 				<tr>
-					<td>ÇÐ°ú:</td>
+					<td>í•™ê³¼:</td>
 					<td><select th:field="*{departmentId}"><option
 								th:each="dt:${departments}" th:value="${dt.id}"
 								th:text="${dt.name}"></option></select> <br></td>
 				</tr>
 				<tr>
-					<td>ÀüÈ­:</td>
+					<td>ì „í™”:</td>
 					<td><input type="text" th:field="*{phone}"><br></td>
 				</tr>
 				<tr>
-					<td>¼ºº°:</td>
+					<td>ì„±ë³„:</td>
 					<td><input type="text" th:field="*{sex}"><br></td>
 				</tr>
 				<tr>
-					<td>ÀÌ¸ÞÀÏ:</td>
+					<td>ì´ë©”ì¼:</td>
 					<td><input type="text" th:field="*{email}"><br></td>
 				</tr>
 			</table>
 			<hr />
-			<button type="submit" class="btn">ÀúÀå</button>
+			<button type="submit" class="btn">ì €ìž¥</button>
 
 			<a th:if="${student.id>0}" th:href="${'delete?id=' + student.id}"
-				class="btn" onclick="return confirm('»èÁ¦ÇÏ½Ã°Ú½À´Ï±î?')">»èÁ¦</a> <a
-				href="list" class="btn">¸ñ·ÏÀ¸·Î</a>
+				class="btn" onclick="return confirm('ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?')">ì‚­ì œ</a> <a
+				href="list" class="btn">ëª©ë¡ìœ¼ë¡œ</a>
 		</form>
 	</div>
 </body>
