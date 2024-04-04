@@ -3,4 +3,6 @@
     <fullyQualifiedTypeName name="ch.qos.logback.core.model.Model"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="net.skhu.dto.Category"/>
+    <fullyQualifiedTypeName name="net.skhu.dto.Role"/>
 </qualifiedTypeNameHistroy>

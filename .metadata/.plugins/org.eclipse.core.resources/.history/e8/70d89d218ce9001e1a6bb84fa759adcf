@@ -1,8 +1,0 @@
-package net.skhu.dto;
-
-public class Student {
-int id;
-String studentNumber;
-String studentName;
-String email;
-}

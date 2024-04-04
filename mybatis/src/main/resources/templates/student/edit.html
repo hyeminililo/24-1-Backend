@@ -42,7 +42,7 @@ button {
 				<tr>
 					<td>학과:</td>
 					<td><select th:field="*{departmentId}"><option
-								th:each="dt:${departments}" th:value="${dt.id}"
+								th:each="dt : ${departments}" th:value="${dt.id}"
 								th:text="${dt.name}"></option></select> <br></td>
 				</tr>
 				<tr>

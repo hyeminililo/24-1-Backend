@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/common.css">
+    <title>Insert title here</title>
+    <style>
+        a.btn {
+            float: right;
+            margin-top: -40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>엔지니어 목록</h1>
+        <a href="create" class="btn">엔지니어 등록</a>
+        <table class="list">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>사번</th>
+                    <th>이름</th>
+                    <th>역할</th>
+                    <th>성별</th>
+                    <th>전화</th>
+                    <th>이메일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="en : ${engineers}">
+                    <td th:text="${en.id}"></td>
+                    <td><a th:text="${en.engineerNo}" th:href="${'edit?id=' + en.id}"></a></td>
+                    <td th:text="${en.name}"></td>
+                    <td th:text="${en.roleName}"></td>
+                    <td th:text="${en.sex}"></td>
+                    <td th:text="${en.phone}"></td>
+                    <td th:text="${en.email}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

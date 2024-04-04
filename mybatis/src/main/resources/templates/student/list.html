@@ -6,7 +6,7 @@
 <style>
 a.btn {
 	float: right;
-	margin-top: j-40px;
+	margin-top: -40px;
 }
 </style>
 <title>Insert title here</title>
@@ -28,14 +28,14 @@ a.btn {
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="st:${students}">
-					<td th:text="${st.id}"></td>
-					<td><a th:text="${st.studentNo}" th:href="${'edit?id='+st.id}"></a>
-					<td th:text="${st.name}"></td>
-					<td th:text="${st.departmentName}"></td>
-					<td th:text="${st.phone}"></td>
-					<td th:text="${st.sex}"></td>
-					<td th:text="${st.email}"></td>
+				<tr th:each="st : ${students}">
+					<td th:text = "${st.id}"></td>
+					<td><a th:text = "${st.studentNo}" th:href="${'edit?id='+st.id}"></a>
+					<td th:text = "${st.name}"></td>
+					<td th:text = "${st.departmentName}"></td>
+					<td th:text = "${st.phone}"></td>
+					<td th:text = "${st.sex}"></td>
+					<td th:text = "${st.email}"></td>
 				</tr>
 			</tbody>
 		</table>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="/common.css" />
+<style>
+a.btn {
+	float: right;
+	margin-top: -40px;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>영화목록</h1>
+		<a href="create" class="btn">영화 등록</a>
+		<table class="list">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>영화</th>
+					<th>감독</th>
+					<th>장르</th>
+					<th>년도</th>
+					<th>국가</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="mo : ${movies}">
+					<td th:text="${mo.id}"></td>
+					<td><a th:text="${mo.title}" th:href="${'edit?id='+mo.id}"></a></td>
+					<td th:text="${mo.director}"></td>
+					<td th:text="${mo.genreName}"></td>
+					<td th:text="${mo.year}"></td>
+					<td th:text="${mo.country}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

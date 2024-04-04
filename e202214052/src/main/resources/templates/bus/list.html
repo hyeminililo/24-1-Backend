@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="/common.css" />
+<style>
+a.btn {
+	float: right;
+	margin-top: 40px;
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<h1>버스목록</h1>
+		<a href="create" class="btn">버스등록</a>
+		<table class="list">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>버스번호</th>
+					<th>기점</th>
+					<th>종점</th>
+					<th>첫차</th>
+					<th>막차</th>
+					<th>유형</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="bu:${buss}">
+					<td th:text="${bu.id}"></td>
+					<td><a th:text="${bu.busNo}" th:href="${'edit?id='+bu.id}"></a>
+					<td th:text="${bu.firstStop}"></td>
+					<td th:text="${bu.lastStop}"></td>
+					<td th:text="${bu.firstBus}"></td>
+					<td th:text="${bu.lastBus}"></td>
+					<td th:text="${bu.categoryName}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
