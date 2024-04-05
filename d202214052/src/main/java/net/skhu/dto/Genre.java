@@ -8,5 +8,5 @@ public class Genre {
 	int id;
 	String title;
 	
-	
+	 int genreId;
 }

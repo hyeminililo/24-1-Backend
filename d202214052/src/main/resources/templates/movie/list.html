@@ -26,13 +26,13 @@ a.btn {
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="mo : ${movies}">
-					<td th:text="${mo.id}"></td>
-					<td><a th:text="${mo.title}" th:href="${'edit?id='+mo.id}"></a></td>
-					<td th:text="${mo.director}"></td>
-					<td th:text="${mo.genreName}"></td>
-					<td th:text="${mo.year}"></td>
-					<td th:text="${mo.country}"></td>
+				<tr th:each="mo : ${ movies }">
+					<td th:text="${ mo.id }"></td>
+					<td><a th:text="${ mo.title }" th:href="${'edit?id='+ mo.id}"></a></td>
+					<td th:text="${ mo.director }"></td>
+					<td th:text="${ mo.genreName }"></td>
+					<td th:text="${ mo.year }"></td>
+					<td th:text="${ mo.country }"></td>
 				</tr>
 			</tbody>
 		</table>

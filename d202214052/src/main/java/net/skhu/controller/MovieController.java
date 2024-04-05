@@ -16,7 +16,7 @@ import net.skhu.mapper.MovieMapper;
 
 @Controller
 @RequestMapping("movie")
-public  class MovieController {
+public class MovieController {
 	@Autowired
 	MovieMapper movieMapper;
 
